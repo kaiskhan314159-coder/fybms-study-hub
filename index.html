@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FYBMS Study Hub</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:white;padding:28px 18px;text-align:center}
+header h1{font-size:30px;margin-bottom:8px}
+header p{opacity:.92}
+nav{background:white;padding:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001}
+nav a{color:#3730a3;text-decoration:none;font-weight:bold;padding:9px 12px;border-radius:8px}
+nav a:hover{background:#eef2ff}
+.container{max-width:1050px;margin:auto;padding:25px 16px}
+.hero{background:white;border-radius:18px;padding:28px;text-align:center;box-shadow:0 5px 20px #0000000d;margin-bottom:25px}
+.hero h2{font-size:25px;margin-bottom:10px}
+.search{width:100%;max-width:650px;padding:14px;border:1px solid #ddd;border-radius:12px;margin-top:18px;font-size:16px}
+.section-title{margin:28px 0 15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.card{background:white;padding:20px;border-radius:15px;box-shadow:0 4px 16px #0000000c;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 7px 22px #0002}
+.card h3{margin:8px 0;color:#312e81}
+.card p{color:#64748b;line-height:1.5}
+.btn{display:inline-block;margin-top:12px;background:#4f46e5;color:white;text-decoration:none;padding:9px 13px;border-radius:8px}
+.announcement{border-left:5px solid #4f46e5}
+footer{margin-top:35px;background:#111827;color:#cbd5e1;text-align:center;padding:25px}
+.hidden{display:none}
+.badge{font-size:28px}
+@media(max-width:500px){header h1{font-size:25px}.hero{padding:22px}.container{padding:18px 12px}}
+</style>
+</head>
+<body>
+<header>
+<h1>📚 FYBMS Study Hub</h1>
+<p>All FYBMS Study Material in One Place</p>
+</header>
+
+<nav>
+<a href="#home">Home</a><a href="#subjects">Subjects</a><a href="#questions">Important Questions</a>
+<a href="#notes">Notes & PDFs</a><a href="#announcements">Announcements</a><a href="#timetable">Timetable</a>
+<a href="#papers">Question Papers</a><a href="#contact">Contact</a>
+</nav>
+
+<main class="container" id="home">
+<section class="hero">
+<h2>🎓 Welcome Students!</h2>
+<p>Find your subjects, notes, important questions, announcements and exam resources.</p>
+<input class="search" id="search" onkeyup="searchCards()" placeholder="🔍 Search subjects, notes, questions...">
+</section>
+
+<h2 class="section-title" id="subjects">📚 All Subjects</h2>
+<div class="grid searchable">
+<div class="card"><span class="badge">📘</span><h3>POM</h3><p>Principles of Management study material.</p><a class="btn" href="#notes">View Material</a></div>
+<div class="card"><span class="badge">📗</span><h3>BTMS</h3><p>Business and management study material.</p><a class="btn" href="#questions">Important Questions</a></div>
+<div class="card"><span class="badge">📊</span><h3>Statistics</h3><p>Formulas, problems and important questions.</p><a class="btn" href="#notes">View Material</a></div>
+<div class="card"><span class="badge">🤝</span><h3>NSS</h3><p>NSS notes, topics and question papers.</p><a class="btn" href="#papers">View Papers</a></div>
+<div class="card"><span class="badge">🇮🇳</span><h3>IKS</h3><p>Indian Knowledge System notes and answers.</p><a class="btn" href="#notes">View Material</a></div>
+<div class="card"><span class="badge">💻</span><h3>IT</h3><p>Information Technology study resources.</p><a class="btn" href="#notes">View Material</a></div>
+<div class="card"><span class="badge">🧮</span><h3>Financial Mathematics</h3><p>Questions, formulas and practice material.</p><a class="btn" href="#questions">View Questions</a></div>
+</div>
+
+<h2 class="section-title" id="questions">📝 Important Questions</h2>
+<div class="grid searchable">
+<div class="card"><h3>⭐ POM Important Questions</h3><p>Add your selected IMP questions here.</p><a class="btn" href="#">Open</a></div>
+<div class="card"><h3>⭐ BTMS Important Questions</h3><p>Add your selected IMP questions here.</p><a class="btn" href="#">Open</a></div>
+<div class="card"><h3>⭐ Statistics Important Questions</h3><p>Add important numerical and theory questions here.</p><a class="btn" href="#">Open</a></div>
+<div class="card"><h3>⭐ NSS Important Questions</h3><p>Add important NSS questions here.</p><a class="btn" href="#">Open</a></div>
+</div>
+
+<h2 class="section-title" id="notes">📄 Notes & PDFs</h2>
+<div class="grid searchable">
+<div class="card"><h3>📕 Subject Notes</h3><p>Upload or link your PDF notes here.</p><a class="btn" href="#">Open Notes</a></div>
+<div class="card"><h3>📑 Answer PDFs</h3><p>Keep question-wise answers and revision PDFs here.</p><a class="btn" href="#">Open PDFs</a></div>
+<div class="card"><h3>📚 Revision Material</h3><p>Quick revision material for exams.</p><a class="btn" href="#">Open</a></div>
+</div>
+
+<h2 class="section-title" id="announcements">📢 Announcements</h2>
+<div class="grid searchable">
+<div class="card announcement"><h3>Latest Announcement</h3><p>Study-related announcements will appear here.</p></div>
+<div class="card announcement"><h3>Exam Updates</h3><p>Add exam and college updates here.</p></div>
+</div>
+
+<h2 class="section-title" id="timetable">📅 Exam Timetable</h2>
+<div class="card searchable"><p>Timetable will be added here. Replace this text with your official exam schedule.</p></div>
+
+<h2 class="section-title" id="papers">📋 Question Papers</h2>
+<div class="grid searchable">
+<div class="card"><h3>Previous Year Papers</h3><p>Add previous-year question paper PDFs here.</p><a class="btn" href="#">View Papers</a></div>
+<div class="card"><h3>Model Papers</h3><p>Add model/sample papers here.</p><a class="btn" href="#">View Papers</a></div>
+</div>
+
+<h2 class="section-title" id="contact">📞 Contact</h2>
+<div class="card"><p>For study material or corrections, add your contact details here.</p></div>
+</main>
+
+<footer>
+<p>© 2026 FYBMS Study Hub • Free Study Website</p>
+<p style="margin-top:7px">Made for students 🎓</p>
+</footer>
+
+<script>
+function searchCards(){
+ let q=document.getElementById("search").value.toLowerCase();
+ document.querySelectorAll(".searchable").forEach(el=>{
+   el.style.display=el.innerText.toLowerCase().includes(q)?"":"none";
+ });
+}
+</script>
+</body>
+</html>
